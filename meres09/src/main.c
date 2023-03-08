@@ -1,29 +1,41 @@
 #include <stdio.h>
-#include "kiss_fft.h"
+#include <fftw3.h>
 
 #define FILENAME "noisy.cf32"
 #define SAMPLE_FREQ 4000000
-#define LENGTH 8
+#define LENGTH 32
 
 int main(void)
 {
-	kiss_fft_cfg cfg = kiss_fft_alloc(LENGTH, 0, NULL, NULL);
-	kiss_fft_cpx complex_in[LENGTH], complex_out[LENGTH];
-	kiss_fft_scalar one=1.0, zero=0.0;
-
+	fftwf_complex *in, *out;
+	fftwf_plan p;
+	in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * LENGTH);
+    out = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * LENGTH);
+    p = fftwf_plan_dft_1d(LENGTH, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+    
 	for(int i=0; i<LENGTH; i++)
 	{
-			complex_in[i].r=one;
-			complex_in[i].i=zero;
+		if(i%2==0)
+		{
+			in[i][0] = 1.0f;
+			in[i][1] = 0.0f;
+		}
+		else
+		{
+			in[i][0] = -1.0f;
+			in[i][1] = 0.0f;
+		}
 	}
 
-	kiss_fft(cfg, complex_in, complex_out);
-
-	for(int i=0; i<LENGTH; i++)
-	{
-		printf("%2d  %04.4f + %04.4fi\n", i, complex_out[i].r, complex_out[i].i);
-	}
+    fftwf_execute(p); /* repeat as needed */
+    
+    fftwf_destroy_plan(p);
 	
-    kiss_fft_free(cfg);
+	for(int i=0; i<LENGTH; i++)
+	{
+		printf("%04.4f + %04.4fi\n",out[i][0],out[i][1]);
+	}
+
+    fftwf_free(in); fftwf_free(out);
 	return 0;
 }
