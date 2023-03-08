@@ -1,0 +1,123 @@
+\chapter{Grid-Dip Oscillator}
+
+\section{Bevezetés}
+
+A Grid-Dip Oscillator egy, a rádiózás hőskorából származó analóg mérőműszer, amely segítségével a következők paraméterek mérhetők (a teljesség igénye nélkül):
+
+\begin{itemize}
+\item
+Egy adott passzív áramköri egység rezonancia frekvenciája: rezgőkör, szűrő, üregrezonátor, antenna, stb.
+\item
+Oszcillátorok vagy rádióadók frekvenciája.
+\item
+Kapacitás mérés (ismert induktivitással rezgőkörként).
+\item
+Induktivitás mérés (ismert kapacitással rezgőkörként).
+\item
+Rezonáns körök jósági tényezőjének összehasonlító mérése.
+\item
+Tápvonal rövidülési tényezője...
+\end{itemize}
+
+A GDO kapcsolási és nyomtatott áramköri rajza KiCAD tervezőprogramban készült, amely szabadon hozzáférhető és ingyenesen használható \cite{kicad}
+
+\section{A GDO kapcsolási rajza}
+
+Az elkészítendő áramkör kapcsolási rajza \aref{fig:gdoschematic} ábrán látható \cite{radiotechnika}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm,keepaspectratio]{gdo_sch.pdf}
+\caption{A GDO kapcsolási rajza}
+\label{fig:gdoschematic} 
+\end{figure}
+
+Az áramkör alapvetően 3 jól elkülöníthető részegységből áll.
+
+\begin{enumerate}
+\item
+A $Q_1$-gyel megvalósított Collpitts (kapacitív három-pont) kapcsolású nagyfrekvenciás L-C oszcillátor (rezgéskeltő), amely a $D_1$ és $D_2$ varikap diódák miatt az $RV_1$ potenciométerrel hangolható (feszültséggel változtatható a kimeneti periodikus jel frekvenciája).
+\item
+A $Q_2$, $Q_3$, $Q_4$ és $Q_6$ bipoláris tranzisztorokkal megvalósított munkaponti áramérzékelésre tervezett astabil multivibrátor, mint áramvezérelt hangfrekvenciás oszcillátor, amely a mért rezgő rendszerből kicsatolt RF jel, vagy a GDO, mint rezgő rendszerből kicsatolt energia hatására történő $Q_1$ munkapont eltolódását alakítja át emberi fül számára érzékelhető hangfrekvenciás jel változássá.
+\item
+A $Q_5$ segítségével megvalósított fázistolós R-C hangfrekvenciás oszcillátor, amely modulátorként működve a $Q_1$ Collpitts-oszcillátor frekvenciáját illetve amplitúdóját modulálja. Ennek célja, hogy a hagyományos szuperheterodin rendszerű rádió vevőkészülékek RF és KF fokozatainak mérése is lehetővé válhasson.
+\end{enumerate}
+
+\section{A GDO nyomtatott áramköri terve}
+
+Az elkészítendő áramkör nyomtatott áramköri terve \aref{fig:gdopcb} ábrán látható.
+
+A nyomtatott áramköri lapon jól felismerhető a Collpitts-oszcillátor tekercse, amely a varikap diódákkal alkot rezgőkört és határozza meg a rezgő rendszer rezonancia frekvenciáját.
+
+Ezen tekercs menetszám megcsapolásokkal rendelkezik, melynek segítségével a GDO működési frekvencia tartománya így kb. 7 - 80 MHz-ig adódik. A változtatható tekercselés oka, hogy az alkalmazott kapacitás-diódák kapacitás átfogása 1:9, amely alapján a frekvencia átfogás (Thomson összefüggés) nem lehet nagyobb 1:3.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=140mm,keepaspectratio]{gdo_pcb.pdf}
+\caption{A GDO nyomtatott áramköri rajza}
+\label{fig:gdopcb} 
+\end{figure}
+
+\section{A GDO alkatrész ültetési rajza}
+
+Az elkészítendő áramkör alkatrész ültetési rajza \aref{fig:gdopos} ábrán látható.
+
+Az ültetési rajzon nemcsak az alkatrész pozíciószámok, hanem az alkatrész értékek is könnydén beazonosíthatók.
+
+A megvalósítandó áramkör egyaránt tartalmaz furatszerelt és felületszerelt áramköri elemeket. A felület-szerelt alkatrészeket a forrasztási oldalról, a furat-szerelt alkatrészeket pedig - az alkatrészlábak megfelelő mértékű meghajlítása után - az alkatrész ültetési oldalról kell a furatokon átdugva beültetni.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=130mm,keepaspectratio]{gdo_pos.pdf}
+\caption{A GDO alkatrész ültetési rajza}
+\label{fig:gdopos} 
+\end{figure}
+
+\section{A GDO egyes részeinek szerelése és élesztése}
+
+A GDO egyes részegységeinek beültetési és élesztési sorrendje a következő:
+
+\begin{enumerate}
+\item
+Collpitts-oszcillátor.
+\item
+Munkaponti áramérzékelő hangfrekvenciás astabil multivibrátor a piezo hangsugárzóval.
+\item
+Modulátorként használt fázistolós R-C oszcillátor.
+\end{enumerate}
+
+A GDO egyes fokozatainak élesztése során mérni kell a következő paramétereket, amelyeknek a mérési jegyzőkönyvbe is bele kell kerülnie:
+
+\begin{itemize}
+\item
+A GDO RF jelének frekvencia átfogása, a kimeneti RF jel szintje, jelalakja a legkisebb, legnagyobb frekvenciákon és az adott frekvencia tartomány közepén.
+\item
+A GDO áramérzékelőjének kimeneti jelének alakja, frekvenciája, amplitúdója az oszcillátor jelszint beállító potméterének ($RV_2$) két véghelyzetében és egy kb. középállásában 20 MHz kimeneti RF jel esetén.
+\item
+A GDO modulátor oszcillátorának kimeneti jele (amplitúdó, jelalak, frekvencia).
+\end{itemize}
+
+\section{Az elkészült GDO}
+
+\subsection{Az alkatrész ültetési oldal}
+
+Az elkészült GDO alkatrész ültetési oldalról készült fényképe látható \aref{fig:circtop} ábrán.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=140mm,keepaspectratio]{circuit_top.pdf}
+\caption{Az elkészült GDO az ültetési oldalról}
+\label{fig:circtop} 
+\end{figure}
+
+\subsection{A forrasztási oldal}
+
+Az elkészült GDO forrasztási oldalról készült fényképe látható \aref{fig:circbot} ábrán.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=140mm,keepaspectratio]{circuit_bot.pdf}
+\caption{Az elkészült GDO a forrasztási oldalról}
+\label{fig:circbot} 
+\end{figure}
+

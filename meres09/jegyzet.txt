@@ -1,0 +1,12 @@
+0123 to QPSK: 0:1, 1:j, 2:-1, 3:-j
+időtartománybeli jelet konjugálni és időben megfordítani!
+
+részletesebb menetrend:
+	- fs és fv alapján egy komplex körforgó vektor generálás, amivel dc-re lehet keverni
+	- le kell keverni
+	- aluláteresztőszűrni kell
+	- decimálni kell, hogy egy szórókód-szimbólumhoz egy komplex minta tartozzon
+	- időben meg kell fordítani és konjugálni kell a vett jelet
+	- a szórókódból megfelelő hosszú, ismétlődő QPSK vektort kell generálni
+	- a szórókódból kapott vektort össze kell korreláltatni a vett jellel
+	- a vett jelben meg kell keresni a csúcsokat, először csak vizuálisan

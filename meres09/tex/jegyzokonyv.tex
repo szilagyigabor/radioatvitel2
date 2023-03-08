@@ -1,0 +1,52 @@
+\section{A mérési jegyzőkönyv formai követelményei}
+
+\begin{itemize}
+\item
+A jegyzőkönyvben benne kell lennie, hogy mikor, milyen műszerrel történt a mérés (pl. a műszer gyári száma egyértelműen azonosítja a műszert) és ki vagy kik végezték a mérést.
+\item
+Minden logikailag összetartozó méréshez mérési elrendezési rajzot kell készíteni és rögzíteni kell az egyes beállított illetve mért paramétereket is. Ez azért szükséges, mert egy mérési jegyzőkönyv alapján reprodukálhatónak kell lennie a mérésnek, vagyis olyan részletességű kell legyen a mérési összeállítási rajz, hogy meg lehessen belőle állapítani, hogy melyik mérőponton, milyen beállítású mérőfejjel, hogyan történt a mérés.
+\item
+Minden mérési eredmény egyedileg vagy csoportosan röviden értékelni kell az adott részegységek paramétereinek megfelelően.
+\item
+A mérési összeállításról fényképfelvétel készítése is javasolt, amely helyettesítheti a mérési összeállítási rajzot, abban az esetben, ha minden eszköz illetve beállítás azon egyértelműen azonosítható.
+\item
+Ha valamilyen segédanyagot használtál (cikk, könyv, valakinek a diplomamunkája, Internetes segédanyag linkek, stb.), akkor azt az adott - logikailag megfelelő - helyen hivatkozd be, illetve tedd bele az irodalomjegyzék fájlba is. A Wikipédiás hivatkozások használatát mellőzd, ehelyett az ott hivatkozott irodalmat használd! - igaz ez mind a beszámolóra, mind a későbbi önlab doksikra, szakdolgozatokra és diplomatervekre egyaránt.
+\end{itemize}
+
+\subsection{A \LaTeX \ használatához további segítség}
+
+Ha egy matematikai összefüggést kell leírnod (korrekt irodalmi hivatkozással \cite{diploma} ), akkor tedd például így: \ref{eq:antrow}.
+% minden képlet esetén az align környzetet érdemes használni, mert ez a legújabb
+\begin{align}
+\ F ( \vartheta )= \sum_{k=0}^{N-1} I_k e^{-jk \beta d cos \vartheta} 
+\label{eq:antrow}
+\end{align}
+
+Ahol:
+\begin{itemize}
+\item
+$\vartheta$ a megfigyelési pont iránya az antennasorhoz képest
+\item
+$\beta$ a hullámszám (2$\pi$/$\lambda$)
+\item
+d az antennaelemek távolsága
+\item
+N az antennaelemek száma
+\item
+$I_k$ az aktuális antennaelem bemeneti komplex gerjesztése (árama)
+\end{itemize}
+Amennyiben kettő, vagy több egybe tartozó egyenletet kell leírni egyetlen környezetbe:
+\begin{align}
+\Delta \varphi &= 0 \\
+\Delta \varphi &= -\frac{\varrho}{\varepsilon}
+\end{align}
+Az egyenlőség-jelhez igazított egyenleteket így lehet bevinni.
+% Az '&' segítségével, oda rendezi az egymás felett levő egyenleteket, ahova az '&' jelet raktad.
+% Figyelem! Az align környezet érzékeny az üres enterekre, ilyet ne hagyjunk, mert nem fordul a kód!
+\\Ez itt egy függelék hivatkozás: \ref{fugg}
+
+\subsection{Forráskódot}
+
+például így társíthatsz LaTex-ben:
+
+\lstinputlisting[language=C]{while1.c}
