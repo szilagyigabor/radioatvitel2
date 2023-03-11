@@ -10,12 +10,42 @@
 #define CARRIER_FREQ 1440000.0f
 #define DATA_RATE 40000.0f
 #define PI 3.1415926535897932384626433832795f
-#define KOD_HOSSZ 128
+#define CODE_LENGTH 128
+#define PLOT_REAL 1
+#define PLOT_IMAG 2
+#define PLOT_REAL_IMAG 3
+#define PLOT_ABS 4
+#define PLOT_REAL_ABS 5
+#define PLOT_IMAG_ABS 6
+#define PLOT_REAL_IMAG_ABS 7
 
 int main(void)
 {
 	int code_int[] = {3,2,2,2,1,2,3,0,3,3,0,3,2,0,1,3,0,2,3,1,0,1,2,3,2,1,1,1,1,2,0,3,2,2,3,3,3,1,3,0,2,1,2,3,2,2,2,2,2,0,3,1,2,0,0,3,1,3,2,3,0,3,2,2,1,1,2,0,2,1,1,0,1,0,3,2,2,2,1,0,1,3,2,2,0,3,2,2,3,1,1,2,2,1,3,2,0,3,1,1,3,0,3,1,2,1,3,2,2,3,2,3,2,1,2,0,0,3,1,1,0,1,2,1,1,1,1,1};
-	int code_length = 128;	
+    fftwf_complex *code = malloc(sizeof(fftwf_complex)*CODE_LENGTH);
+    for(int i=0; i<CODE_LENGTH; i++)
+    {
+        switch(code_int[i])
+        {
+            case 0:
+                code[i][0] = 1.0f;
+                code[i][1] = 0.0f;
+                break;
+            case 1:
+                code[i][0] = 0.0f;
+                code[i][1] = -1.0f;
+                break;
+            case 2:
+                code[i][0] = -1.0f;
+                code[i][1] = 0.0f;
+                break;
+            case 3:
+                code[i][0] = 0.0f;
+                code[i][1] = 1.0f;
+                break;
+        }
+        //printf("%d -> %+01.0f%+01.0fi\n",code_int[i],code[i][0],code[i][1]);
+    }
 
 
 	// open file and determine number of complex samples
@@ -64,12 +94,12 @@ int main(void)
 	}
 	
 	// print original time domain data
-	plot(time_N, samples, N, 1024, "original_samples", "Eredeti időtartomány");
+	plot(time_N, samples, N/1000, 1, "original_samples", "Eredeti időtartomány", PLOT_REAL_IMAG_ABS);
 
 	// calculate and print original spectrum
    	fftwf_execute(pf);
 	normalize(spectrum, N);
-	plot(freq_N, spectrum, N, 1024, "original_spectrum", "Eredeti spektrum");
+	plot(freq_N, spectrum, N, 1024, "original_spectrum", "Eredeti spektrum", PLOT_REAL_IMAG_ABS);
 
 	// mix from the carrier to DC
 	float dfi = 2.0f*PI/SAMPLE_FREQ*CARRIER_FREQ;
@@ -88,7 +118,7 @@ int main(void)
     fftwf_execute(pf);
 	
 	// print mixed spectrum
-	plot(freq_N, spectrum, N, 1024, "mixed_spectrum", "Keverés utáni spektrum");
+	plot(freq_N, spectrum, N, 1024, "mixed_spectrum", "Keverés utáni spektrum", PLOT_REAL_IMAG_ABS);
 
 	// brute force low pass filter
 		// calculate first and last index to be zeroed
@@ -101,20 +131,23 @@ int main(void)
 	}
 
 	// print filtered spectrum
-	plot(freq_N, spectrum, N, 1024, "filtered_spectrum", "Szűrés utáni spektrum");
+	plot(freq_N, spectrum, N, 1024, "filtered_spectrum", "Szűrés utáni spektrum", PLOT_REAL_IMAG_ABS);
 	
 	// print filtered time domain data
 	fftwf_execute(pb);
 	normalize(samples, N);
-	plot(time_N, samples, N, 1024, "filtered_samples", "Szűrés utáni időtartomány");
+	plot(time_N, samples, N/100, 1, "filtered_samples", "Szűrés utáni időtartomány", PLOT_REAL_IMAG_ABS);
 
 	// decimate time domain data
 		// calculate decimation factor so that one spreading symbol lasts 16 samples
 	int factor = (int)(SAMPLE_FREQ/DATA_RATE);
 	printf("dec factor: %d\n",factor);
 	int n = N/factor;
-	fftwf_complex *decimated_samples = fftwf_malloc(sizeof(fftwf_complex)*N/factor);
+	fftwf_complex *decimated_samples = fftwf_malloc(sizeof(fftwf_complex)*n);
+	fftwf_complex *correlated_samples = fftwf_malloc(sizeof(fftwf_complex)*n);
+	fftwf_complex *decimated_spectrum = fftwf_malloc(sizeof(fftwf_complex)*n);
 	
+    // averaging decimation
 	fftwf_complex sum;
 	for(int i=0; i<n; i++)
 	{
@@ -129,8 +162,41 @@ int main(void)
 		decimated_samples[i][1] = sum[1]/(float)factor;
 	}
 	
+	// time vector used for plotting
+	float *time_decimated;
+	time_decimated = malloc(sizeof(float)*n);
+	time_step = 1.0f/SAMPLE_FREQ*(float)factor;
+	//float freq_step = 1.0f/(float)N*SAMPLE_FREQ;
+	time_stepper=0.0f;
+    for(int i=0; i<n; i++)
+	{
+		time_decimated[i] = time_stepper;
+		time_stepper += time_step;
+	}
 
+    // plot decimated time domain data
+	plot(time_decimated, decimated_samples, N/100/factor, 1, "decimated_samples", "Decimálás utáni időtartomány", PLOT_REAL_IMAG_ABS);
+
+    //correlate with the spreading code
+    for(int i=0; i<n-CODE_LENGTH; i++)
+    {
+        correlated_samples[i][0] = 0.0f;
+        correlated_samples[i][1] = 0.0f;
+        for(int j=0; j<CODE_LENGTH; j++)
+        {
+            correlated_samples[i][0] += decimated_samples[i+j][0]*code[j][0] - decimated_samples[i+j][1]*code[j][1];
+            correlated_samples[i][1] += decimated_samples[i+j][0]*code[j][1] + decimated_samples[i+j][1]*code[j][0];
+        }
+    }
+
+    // plot correlation
+	plot(time_decimated, correlated_samples, n, 1, "correlated_samples", "Korrelálás utáni időtartomány", PLOT_REAL_IMAG);
+
+    free(code);
+    free(time_decimated);
 	fftwf_free(decimated_samples);
+	fftwf_free(correlated_samples);
+	fftwf_free(decimated_spectrum);
 	free(freq_N);
 	free(time_N);
     fftwf_destroy_plan(pf);

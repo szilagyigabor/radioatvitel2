@@ -24,8 +24,14 @@ void complex_mul(fftwf_complex *a, fftwf_complex *b)
 
 
 // plot an array of complex numbers with gnuplot
-void plot(float *xdata, fftwf_complex *arr, int length, int stride, const char *name, const char *title)
+void plot(float *xdata, fftwf_complex *arr, int length, int stride, const char *name, const char *title, int select)
 {
+    if(select<1 || select>7)
+    {
+        printf("wrong plot selection\n");
+        return;
+    }
+
 	FILE *fs = fopen("samples.txt","w");
 	fprintf(fs, "#serial real imag abs\n");
 	for(int i=0; i<length; i+=stride)
@@ -36,10 +42,37 @@ void plot(float *xdata, fftwf_complex *arr, int length, int stride, const char *
     fprintf(fp, "set terminal pdfcairo\n");
     fprintf(fp, "set output \"%s.pdf\"\n", name);
     fprintf(fp, "set title \"%s\"\n", title);
-    fprintf(fp, "set xr [%f:%f]\n", xdata[0], xdata[length-1]);
-    fprintf(fp, "plot\"samples.txt\" u 1:2 t \"Real\" w l, \\\n");
-    fprintf(fp, "    \"samples.txt\" u 1:3 t \"Imag\" w l, \\\n");
-    fprintf(fp, "    \"samples.txt\" u 1:4 t \"Abs\" w l");
+    fprintf(fp, "set xr [%f:%f]\n", xdata[0]-xdata[length-1]*0.05f, xdata[length-1]*1.05f);
+    
+    if(select&1)
+    {
+        fprintf(fp, "plot \"samples.txt\" u 1:2 t \"Real\" w l,\\\n");
+    }
+
+    if(select&2)
+    {
+        if(select&1)
+        {
+            fprintf(fp, "     \"samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
+        }
+        else
+        {
+            fprintf(fp, "plot \"samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
+        }
+    }
+
+    if(select&4)
+    {
+        if(select&1 || select&2)
+        {
+            fprintf(fp, "     \"samples.txt\" u 1:4 t \"Abs\" w l");
+        }
+        else
+        {
+            fprintf(fp, "plot \"samples.txt\" u 1:4 t \"Abs\" w l");
+        }
+    }
+
     fclose(fp);
     
 	if(system("gnuplot plotter.gp"))

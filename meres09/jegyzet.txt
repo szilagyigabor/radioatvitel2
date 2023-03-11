@@ -10,3 +10,13 @@ részletesebb menetrend:
 	- a szórókódból megfelelő hosszú, ismétlődő QPSK vektort kell generálni
 	- a szórókódból kapott vektort össze kell korreláltatni a vett jellel
 	- a vett jelben meg kell keresni a csúcsokat, először csak vizuálisan
+
+
+A képről leolvasott bitek:
+AAAA2DD...
+
+1010 1010 1010 1010 0010 1101 1101 0100 0110 1101 0010 0111 0111 0011 0000 0110
+A    A    A    A    2    D    D    4    6    D    2    7    7    3    0    6
+AAAA2DD46D277306
+MEGOLDÁS: 46D277306
+
