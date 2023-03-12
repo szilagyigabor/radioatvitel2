@@ -5,7 +5,7 @@
 #include <digitkf.h>
 
 
-#define FILENAME "noisy.cf32"
+#define FILENAME "../noisy.cf32"
 #define SAMPLE_FREQ 4000000.0f
 #define CARRIER_FREQ 1440000.0f
 #define DATA_RATE 40000.0f

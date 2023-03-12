@@ -32,32 +32,32 @@ void plot(float *xdata, fftwf_complex *arr, int length, int stride, const char *
         return;
     }
 
-	FILE *fs = fopen("samples.txt","w");
+	FILE *fs = fopen("tmp/samples.txt","w");
 	fprintf(fs, "#serial real imag abs\n");
 	for(int i=0; i<length; i+=stride)
 		fprintf(fs, "%f %f %f %f\n", xdata[i], arr[i][0], arr[i][1], sqrt(arr[i][0]*arr[i][0] + arr[i][1]*arr[i][1]));
 	fclose(fs);
 	
-    FILE *fp = fopen("plotter.gp", "w");
+    FILE *fp = fopen("tmp/plotter.gp", "w");
     fprintf(fp, "set terminal pdfcairo\n");
-    fprintf(fp, "set output \"%s.pdf\"\n", name);
+    fprintf(fp, "set output \"output/%s.pdf\"\n", name);
     fprintf(fp, "set title \"%s\"\n", title);
-    fprintf(fp, "set xr [%f:%f]\n", xdata[0]-xdata[length-1]*0.05f, xdata[length-1]*1.05f);
+    fprintf(fp, "set xr [%f:%f]\n", (xdata[0]-xdata[length-1])*0.05f, xdata[length-1]*1.05f);
     
     if(select&1)
     {
-        fprintf(fp, "plot \"samples.txt\" u 1:2 t \"Real\" w l,\\\n");
+        fprintf(fp, "plot \"tmp/samples.txt\" u 1:2 t \"Real\" w l,\\\n");
     }
 
     if(select&2)
     {
         if(select&1)
         {
-            fprintf(fp, "     \"samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
+            fprintf(fp, "     \"tmp/samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
         }
         else
         {
-            fprintf(fp, "plot \"samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
+            fprintf(fp, "plot \"tmp/samples.txt\" u 1:3 t \"Imag\" w l,\\\n");
         }
     }
 
@@ -65,17 +65,17 @@ void plot(float *xdata, fftwf_complex *arr, int length, int stride, const char *
     {
         if(select&1 || select&2)
         {
-            fprintf(fp, "     \"samples.txt\" u 1:4 t \"Abs\" w l");
+            fprintf(fp, "     \"tmp/samples.txt\" u 1:4 t \"Abs\" w l");
         }
         else
         {
-            fprintf(fp, "plot \"samples.txt\" u 1:4 t \"Abs\" w l");
+            fprintf(fp, "plot \"tmp/samples.txt\" u 1:4 t \"Abs\" w l");
         }
     }
 
     fclose(fp);
     
-	if(system("gnuplot plotter.gp"))
+	if(system("gnuplot tmp/plotter.gp"))
 		printf("gnuplot error ...\n");
     
     return;
