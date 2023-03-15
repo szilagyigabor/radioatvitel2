@@ -1,0 +1,608 @@
+Fordítás pdflatex 1\n\n\n
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./meres09.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-12-17>
+
+LaTeX Info: Writing file `./meres09.xmpdata'.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+(./magyar.ldf))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/hu/babel-magyar.te
+x) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/everyshi/everyshi.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty){/usr/local/
+texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: Metadata file meres09.xmpdata read successfully.
+(./meres09.xmpdata)<<sRGB.icc>>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-utf8.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file meres09.aux.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd) [1 <./kep/bme_l
+ogo.pdf> <./kep/hvt_logo.png>]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd)
+
+LaTeX Warning: Citation `FFTW3' on page 2 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Gnuplot' on page 2 undefined on input line 146.
+
+
+LaTeX Warning: Reference `fig:original' on page 2 undefined on input line 146.
+
+
+
+pdfTeX warning: pdflatex (file ./kep/original_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+[2] [3 <./kep/original_samples.pdf> <./kep/original_spectrum.pdf
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [4]
+
+pdfTeX warning: pdflatex (file ./kep/filtered_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/filtered_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `fig:correlated' on page 5 undefined on input line 209
+.
+
+
+LaTeX Warning: Reference `fig:megfejtes' on page 5 undefined on input line 209.
+
+
+
+
+pdfTeX warning: pdflatex (file ./kep/correlated_samples.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+[5 <./kep/filtered_samples.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+No file meres09.bbl.
+[6 <./kep/filtered_spectrum.pdf>] [7 <./kep/correlated_samples.pdf> <./kep/megf
+ejtes.jpg>] (../c/src/digitkf.h) (../c/src/digitkf.c [8]) (../c/src/main.c
+[9] [10] [11]) [12] (./meres09.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `meres09.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ ){/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on meres09.pdf (12 pages, 739246 bytes).
+Transcript written on meres09.log.
+\n\n\nFordítás bibtex\n\n\n
+This is BibTeX, Version 0.99d (TeX Live 2022)
+The top-level auxiliary file: meres09.aux
+The style file: plain.bst
+Database file #1: mybib.bib
+Warning--to sort, need author or key in FFTW3
+Warning--to sort, need author or key in Gnuplot
+(There were 2 warnings)
+\n\n\nFordítás pdflatex 2\n\n\n
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./meres09.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-12-17>
+
+LaTeX Warning: Writing or overwriting file `./meres09.xmpdata'.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+(./magyar.ldf))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/hu/babel-magyar.te
+x) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/everyshi/everyshi.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty){/usr/local/
+texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: Metadata file meres09.xmpdata read successfully.
+(./meres09.xmpdata)<<sRGB.icc>>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-utf8.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./meres09.aux) (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./meres09.out) (./meres09.out)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd) [1 <./kep/bme_l
+ogo.pdf> <./kep/hvt_logo.png>]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd)
+
+LaTeX Warning: Citation `FFTW3' on page 2 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Gnuplot' on page 2 undefined on input line 146.
+
+
+
+pdfTeX warning: pdflatex (file ./kep/original_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+[2] [3 <./kep/original_samples.pdf> <./kep/original_spectrum.pdf
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [4]
+
+pdfTeX warning: pdflatex (file ./kep/filtered_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/filtered_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: pdflatex (file ./kep/correlated_samples.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+[5 <./kep/filtered_samples.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./meres09.bbl) [6 <./kep/filtered_spectrum.pdf>] [7 <./kep/correlated_samples.
+pdf> <./kep/megfejtes.jpg>] (../c/src/digitkf.h) (../c/src/digitkf.c [8])
+(../c/src/main.c [9] [10] [11]) [12] (./meres09.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ){/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on meres09.pdf (12 pages, 744510 bytes).
+Transcript written on meres09.log.
+\n\n\nFordítás pdflatex 3\n\n\n
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./meres09.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-12-17>
+
+LaTeX Warning: Writing or overwriting file `./meres09.xmpdata'.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+(./magyar.ldf))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/hu/babel-magyar.te
+x) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/everyshi/everyshi.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty){/usr/local/
+texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: Metadata file meres09.xmpdata read successfully.
+(./meres09.xmpdata)<<sRGB.icc>>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-utf8.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./meres09.aux) (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./meres09.out) (./meres09.out)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd) [1 <./kep/bme_l
+ogo.pdf> <./kep/hvt_logo.png>]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd)
+
+pdfTeX warning: pdflatex (file ./kep/original_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+[2] [3 <./kep/original_samples.pdf> <./kep/original_spectrum.pdf
+
+pdfTeX warning: pdflatex (file ./kep/original_spectrum.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [4]
+
+pdfTeX warning: pdflatex (file ./kep/filtered_samples.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./kep/filtered_spectrum.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: pdflatex (file ./kep/correlated_samples.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+[5 <./kep/filtered_samples.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./meres09.bbl) [6 <./kep/filtered_spectrum.pdf>] [7 <./kep/correlated_samples.
+pdf> <./kep/megfejtes.jpg>] (../c/src/digitkf.h) (../c/src/digitkf.c [8])
+(../c/src/main.c [9] [10] [11]) [12] (./meres09.aux) ){/usr/local/texlive/2022/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
+-super/sftt1200.pfb>
+Output written on meres09.pdf (12 pages, 741786 bytes).
+Transcript written on meres09.log.
