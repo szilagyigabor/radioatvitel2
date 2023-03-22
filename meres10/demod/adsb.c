@@ -52,16 +52,20 @@ int main(int argc,char **argv)
 	do {
 		read_len = fread(buffer, 1, BUF_SIZE, stdin);	// read data to input buffer
 
-		for(bix=0; bix<read_len; bix+=2) {
+		for(bix=0; bix<read_len-1; bix+=2) {
 			// convert I-Q to magnitude
+            abs_val = iq_to_abs[buffer[bix]][buffer[bix+1]];
 
 			// FIR filtering
-
+            accumulator = accumulator-fifo[fptr]+abs_val;
+            fifo[fptr] = abs_val;
+            fptr = (fptr+1)%FIR_LEN;
+            
 			// Decoding
 
 			// ADS-B packet search and print
 
-			printf( "%d\t%d\n", buffer[bix], buffer[bix+1] );
+			printf( "%d\t%d\t%d\n", buffer[bix], buffer[bix+1], accumulator/FIR_LEN );
 		}
 
 		// uncomment if not testing
