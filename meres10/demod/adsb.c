@@ -51,7 +51,8 @@ int main(int argc,char **argv)
 	// main loop
 	do {
 		read_len = fread(buffer, 1, BUF_SIZE, stdin);	// read data to input buffer
-
+        stm = 0;
+        hex = 0;
 		for(bix=0; bix<read_len-1; bix+=2) {
 			// convert I-Q to magnitude
             abs_val = iq_to_abs[buffer[bix]][buffer[bix+1]];
@@ -60,17 +61,45 @@ int main(int argc,char **argv)
             accumulator = accumulator-fifo[fptr]+abs_val;
             fifo[fptr] = abs_val;
             fptr = (fptr+1)%FIR_LEN;
-            
+
 			// Decoding
+			if(fifo[(fptr-FIR_LEN/2)%FIR_LEN] > accumulator/FIR_LEN)
+                bit = 1;
+			else
+			    bit = 0;
 
 			// ADS-B packet search and print
+			// State machine
+			if(stm < 16) {
+                if(adsb_preamble[stm] == bit)
+                    stm++;
+                else
+                    stm = 0;
+            }
+            else if(stm < 240) {
+                if(stm == 16)
+                    printf("\n*");
+                // Manchaster-decode
+                if(stm%2==0)
+                {
+                    hex = hex << 1;
+                    hex = hex | bit;
+                }
+                if(stm>15 && stm%8==0)
+                    printf("%x", hex);
+                stm += 1;
+            }
+            else
+                stm = 0;
 
-			printf( "%d\t%d\t%d\n", buffer[bix], buffer[bix+1], accumulator/FIR_LEN );
+
+			//printf( "%d\t%d\t%d\t%d\n", buffer[bix], buffer[bix+1], abs_val, accumulator/FIR_LEN );
 		}
 
 		// uncomment if not testing
-		break;
+		//break;
 	} while(read_len>0);
+	printf("\n");
 
 	return 0;
 }

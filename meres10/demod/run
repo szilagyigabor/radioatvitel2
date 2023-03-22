@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cat NOMK01___6186.dat | ./demod > test.txt
-gnuplot plotter.gp
+#cat NOMK01___6186.dat | ./demod
+#gnuplot plotter.gp
