@@ -63,36 +63,44 @@ int main(int argc,char **argv)
             fptr = (fptr+1)%FIR_LEN;
 
 			// Decoding
-			if(fifo[(fptr-FIR_LEN/2)%FIR_LEN] > accumulator/FIR_LEN)
+			if(fifo[(fptr-FIR_LEN/2)%FIR_LEN] > accumulator/FIR_LEN) {
                 bit = 1;
-			else
+            }
+			else {
 			    bit = 0;
+            }
 
 			// ADS-B packet search and print
 			// State machine
 			if(stm < 16) {
-                if(adsb_preamble[stm] == bit)
+                if(adsb_preamble[stm] == bit) {
                     stm++;
-                else
-                    stm = 0;
-            }
-            else if(stm < 240) {
-                if(stm == 16)
-                    printf("\n*");
-                // Manchaster-decode
-                if(stm%2==0)
-                {
-                    hex = hex << 1;
-                    hex = hex | bit;
                 }
-                if(stm>15 && stm%8==0)
-                    printf("%x", hex);
-                stm += 1;
+                else {
+                    stm = 0;
+                }
             }
-            else
-                stm = 0;
-
-
+            else {
+                if(stm < 240) {
+	                if(stm == 16) {
+	                    printf("\n*");
+                    }
+	                // Manchaster-decode
+                    if(stm>15 && stm%16==15) {
+	                    printf("%02x", hex);
+                    }
+                    if(stm%2==0) {
+                        hex = hex << 1;
+                        if(bit==1) {
+                            hex = hex | 1;
+                        }
+                    }
+	                stm++;
+                }
+                else {
+                    stm = 0;
+                }
+            }
 			//printf( "%d\t%d\t%d\t%d\n", buffer[bix], buffer[bix+1], abs_val, accumulator/FIR_LEN );
 		}
 
@@ -100,6 +108,5 @@ int main(int argc,char **argv)
 		//break;
 	} while(read_len>0);
 	printf("\n");
-
 	return 0;
 }
