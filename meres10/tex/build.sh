@@ -1,6 +1,6 @@
 #!/bin/sh
 cim="meres10"
-bib=1
+bib=0
 echo "Fordítás pdflatex 1"
 echo "Fordítás pdflatex 1\n\n\n" > output.txt
 pdflatex -interaction=nonstopmode -halt-on-error $cim.tex >> output.txt

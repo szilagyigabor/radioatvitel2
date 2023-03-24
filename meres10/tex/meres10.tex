@@ -1,10 +1,10 @@
 % pdf/a 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
-    \Title{Rádióátviteli mérések laboratórium 2, 9. mérés}
+    \Title{Rádióátviteli mérések laboratórium 2, 10. mérés}
     \Author{Szilágyi Gábor}
     \Language{hu-HU}
-    \Subject{Digitális jelfeldolgozás}
-    \Keywords{digitális jelfeldolgozás, CNCO, zajszint alatti kommunikáció, digitális KF}
+    \Subject{ADS-B jel vétele}
+    \Keywords{ADS-B, OOK, Manchaster-kód, valósidejű jelfeldolgozás}
     \Publisher{Szilágyi Gábor}
 \end{filecontents*}
 
@@ -102,7 +102,7 @@
     \vspace{3cm}
     \large{Rádióátviteli mérések laboratórium 2} \\
     \vspace{2cm}
-    \Large{\bf{9. mérés\\Digitális KF}} \\
+    \Large{\bf{10. mérés\\ADS-B vétel}} \\
     \vspace{2cm}
 }
 
@@ -120,23 +120,43 @@
 \maketitle
 \setcounter{page}{2}
 \section{A feladat}
-    Erre a laboralkalomra a feladat egy C program kiegészítése, ami készen alkalmas arra, hogy valós időben egy szoftverrádióból érkező mintákból dekódolja az ADS-B adásokat. Tanszéki számítógépes terem hiányában konzerv fájlokból kellett kohámoznunk az előre felvett adásokat.
+    Erre a laboralkalomra a feladat egy C program kiegészítése, ami készen alkalmas arra, hogy valós időben egy szoftverrádióból érkező mintákból dekódolja az ADS-B adásokat. Tanszéki számítógépes terem hiányában konzerv fájlokból kellett kihámoznunk az előre felvett adásokat. A feladathoz nagy segítség a rendelkezésre álló programkód-váz (\ref{adsb.c} függelék), ezt kellett kiegészíteni a minták feldolgozását végző és az eredményeket kiíró résszel.
 \section{A megoldás lépései}
     \subsection{OOK kódolt bitek előállítása}
-        Az IQ mintákból először egy FIR szűrővel mozgó átlagot állítok elő, a szűrőablak \verb|FIR_LEN = 8| minta hosszú.
-		Tehát a megfejtés szinkronizáló minta utáni része a következő: \verb|0x46D277306|
-\bibliography{mybib}
-\bibliographystyle{plain}
+        A bejövő I/Q mintákból először amplitúdót számolok. Ehhez egy előre elkészített, 128-as referenciaszinthez igazított look up table áll rendelkezésre, amiből egyszerűen ki kell olvasni az adott I és Q értékekhez tartózó amplitúdót. Erre azért van szükség, mert mintánként egyesével újraszámolni az amplitúdót a gyökvonás miatt túl költséges lenne a megadott mintavételi frekvencia mellett.
+
+        Az amplitúdókból egy FIR szűrővel mozgó átlagot állítok elő, a szűrőablak \verb|FIR_LEN = 8| minta hosszú. Erre a lépésre azért van szükség, hogy különböző vételi teljesítményű jelek esetén is helyesen el lehessen végezni a 0/1 döntést. A FIR szűrő egy egyszerű mozgóátlag, így a késleltetése \verb|FIR_LEN/2 = 4| minta hosszú, tehát ennyivel a legújabbnál régebbi mintára vonatkozó mozgóátlagot állít elő. Az eredeti I/Q minták (,,I'' és ,,Q''), az amplitúdó (,,Abs'') és a belőle képzett mozgóátlag (,,Avg'') \aref{fig:signals}. ábrán láthatóak. A szűrőhöz szükséges késleltetés egy cirkuláris buffer segítségével van megvalósítva, az átlagképzéshez pedig egy akkumulátort használok és az átlag \verb|FIR_LEN|-szeresét tárolom, így itt sincs szükség mintánként egy osztásra, csak egy összeadásra, egy kivonásra és memóriaírásra, ill. -olvasásra.
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{kep/signals.pdf}
+            \caption{A konzerv fájlból kiolvasott I/Q minták, az amplitúdó és az amplitúdó mozgóátlaga.}
+            \label{fig:signals}
+        \end{figure}
+
+        A mozgóátlagot az OOK modulációnál adaptív döntési szintként lehet használni, ami az ON és OFF teljesítményszintek átlaga közelébe áll be, ha a 0-s és 1-es bitek gyakorisága körülbelül megegyezik. A Manchaster kódolásnál ez automatikusan teljesül. Az aktuálisan feldolgozott (4 ütemmel ez előtti) minta amplitúdóját a legutóbb kiszámolt átlagszinthez komparálom, ez alapján döntök 0-s vagy 1-es bitre. Pontosabban az aktuális LUT-ból kiolvasott amplitúdó \verb|FIR_LEN|-szeresét számolom ki és ezt hasonlítom össze az akkumulátorban tárolt értékkel, ami az átlag \verb|FIR_LEN|-szerese. Így ennél a lépésnél sincs szükség minden ütemben osztás műveletet végezni. Mivel a mintavételi sebesség megegyezik a bitsebsséggel, minden bejövő mintából egy bit áll elő.
+    \subsection{Állapotgép a bitek feldolgozásához}
+        Az aktuális bit segítségével vezérlek egy állapotgépet. Ennek az első feladata az ADS-B adás premble-jének felismerése, amely 16 bit hosszú. Itt egyszerűen egy számlálóval a preamble megadott mintázatával egyező előző biteket számolom. Ha az aktuális bit hibás, akkor nullázom a számlálót és elölről kezdem a keresést. Ha a számláló elért 16-ig, akkor ez azt jelenti, hogy megtaláltam a preamble-t, következik még 112 adatbit, ami a Manchaster-kódolás miatt 224 bitet jelent, így összesen 240-ig kell elszámolni. A Manchaster-dekódoláshoz egyszerűen a kód bitpárjaiból az első bit adja meg az adatbitet (0-tól indexelve így a páros indexű bejövő bitek).
+
+        Az adatbitek kiírásához 8-asával bájtokba rendezem őket, majd a hexadecimális értékeket kiírom a kimenetre. A megtalált adások elejét új sorral és csillaggal jelzem. A teljes konzervfájlra a kimenet \aref{test.txt}. függelékben olvasható. A kimenet első sorának utolsó 4 karaktere (\verb|6186|) megegyezik a bemeneti mintákat tartalmazó fájl nevében megadott részlettel, ebből látszik, hogy a dekódolás helyes. Az ábrák generálásához a Gnuplot programot használtam, aminek az ábrát generáló szkriptje \aref{plotter.gp}. függelékben látható.
+%\bibliography{mybib}
+%\bibliographystyle{plain}
 %
 \clearpage
 \appendix
 %
-\section{adsb.c}
-		\lstinputlisting{../demod/adsb.c}
+\section{test.txt (dekódolt adat)}
+    \label{test.txt}
+	\lstinputlisting{code/test.txt}
 \section{build}
-		\lstinputlisting{../demod/build}
+	\lstinputlisting{code/build}
 \section{run}
-		\lstinputlisting{../demod/run}
+	\lstinputlisting{code/run}
+\section{plotter.gp}
+    \label{plotter.gp}
+	\lstinputlisting{code/plotter.gp}
+\section{adsb.c}
+    \label{adsb.c}
+    \lstinputlisting{code/adsb.c}
 %
 \end{document}
 
