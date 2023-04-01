@@ -1,0 +1,158 @@
+% pdf/a 
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+    \Title{Rádióátviteli mérések laboratórium 2, 2. mérés}
+    \Author{Horváth Péter, Kepics János, Pintér Bálint, Szilágyi Gábor}
+    \Language{hu-HU}
+    \Subject{DTF}
+    \Keywords{DTF, CWFM}
+    \Publisher{Horváth Péter, Kepics János, Pintér Bálint, Szilágyi Gábor}
+\end{filecontents*}
+
+\documentclass[a4paper,12pt,titlepage]{article}
+%\documentclass[a4paper,12pt,titlepage,draft]{article}
+\usepackage{ucs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath,bm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage[hang]{caption}
+\usepackage{subcaption}
+%\usepackage{blkarray,booktabs,bigstrut} % a címkézett mátrixhoz
+%\usepackage{enumerate}
+%\usepackage{psfrag}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+%\usepackage[hyphenbreaks]{breakurl}
+%\usepackage[hyphens]{url}
+%\usepackage{multirow}
+%\usepackage{booktabs}
+%\usepackage{hyperref}
+\usepackage{listings}
+%\usepackage{cite}
+%\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage[a-3u]{pdfx}
+\hypersetup{
+    colorlinks,
+%    linkcolor={red!50!black},
+    linkcolor={black},
+%    citecolor={blue!50!black},
+    citecolor={black},
+%    urlcolor={blue!80!black}
+    urlcolor={blue!80!black}
+}
+
+\definecolor{mygray}{RGB}{240, 240, 240}
+\definecolor{mygreen}{RGB}{0, 140, 40}
+
+\lstset{ % General setup for the package
+	language=C,
+	basicstyle=\scriptsize\ttfamily,
+	numbers=left,
+	numberstyle=\tiny,
+	tabsize=4,
+	backgroundcolor=\color{mygray},
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces,
+	frame=trbl,
+	breaklines=true,
+	%breakwhitespace=true,
+	morekeywords={sort2,sort8},
+	stringstyle=\color{red},
+	commentstyle=\color{mygreen},
+	keywordstyle=\color{blue}
+}
+
+\sisetup{
+    range-phrase=--,
+    range-units=single,
+    output-decimal-marker={,},
+    tight-spacing=true,
+    print-unity-mantissa=false,
+}
+
+%\DeclareMathOperator{\exp}{exp}
+%\DeclareMathOperator{\rot}{rot}
+%\DeclareMathOperator{\min}{min}
+%\DeclareMathOperator{\divergence}{div}
+
+\sloppy % Margón túllógó sorok tiltása.
+\widowpenalty=10000 \clubpenalty=10000 %A fattyú- és árvasorok elkerülése
+\def\hyph{-\penalty0\hskip0pt\relax} % Kötőjeles szavak elválasztásának engedélyezése
+
+\frenchspacing
+\pagestyle{plain} 
+
+%\listfiles % a package-ek kilistázása a logba
+
+\title{
+    \centering
+    \includegraphics[width=0.48\textwidth]{kep/bme_logo.pdf} \\
+    \vspace{0.5cm}
+    \large{\bf Budapesti Műszaki és Gazdaságtudományi Egyetem \\
+    Villamosmérnöki és Informatikai Kar \\
+    Szélessávú Hírközlés és Villamosságtan Tanszék}\\
+    \vspace{0.5cm}
+    \includegraphics[width=0.3\textwidth]{kep/hvt_logo.png} \\
+    \vspace{3cm}
+    \Large{Rádióátviteli mérések laboratórium 2} \\
+    \vspace{2cm}
+    \Large{\bf{2. mérés\\DTF}} \\
+    \vspace{2cm}
+}
+
+%\parskip=10pt
+%\parindent=0pt
+
+%\newcommand\adj[1]{#1^{\mathrm{H}}}
+
+\author{Horváth Péter (), Kepics János (),\\Pintér Bálint (), Szilágyi Gábor (NOMK01)}
+\date{Budapest, \today}
+
+
+\begin{document}
+%
+\maketitle
+\setcounter{page}{2}
+\section{A feladat}
+%\bibliography{mybib}
+%\bibliographystyle{plain}
+%
+\clearpage
+\appendix
+%
+\end{document}
+
+%\cite{Henneron14}
+
+%            \begin{align}
+%                \label{equ:svd}
+%                {\bf S}~=&~{\bf U \Sigma \adj{V}}
+%            \end{align}
+
+%            \begin{figure}
+%                \centering
+%                \includegraphics[width=0.8\textwidth]{kep/szerkesztett/wstk-mighty-gecko-nagy.jpg}
+%                \caption{WSTK + radio board.}
+%                \label{fig:wstkmighty}
+%            \end{figure}
+% \cite{Anritsu}
+%            \begin{figure}
+%                \centering
+%                \begin{subfigure}{0.48\textwidth}
+%                    \includegraphics[width=\textwidth]{kep/szerkesztett/sol-868-conducted.png}
+%                    \caption{\SI{868}{MHz}}
+%                \end{subfigure}
+%                \begin{subfigure}{0.48\textwidth}
+%                    \includegraphics[width=\textwidth]{kep/szerkesztett/sol-470-conducted.png}
+%                    \caption{\SI{470}{MHz}}
+%                \end{subfigure}
+%                \caption{470 és \SI{868}{MHz}-es Sol radio board-ok kimeneti spektruma.}
+%                \label{fig:sol-conducted}
+%            \end{figure}
+
