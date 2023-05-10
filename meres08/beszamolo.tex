@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper,oneside]{report}
+% nagyon sok kép esetén meggyorsítható a fordítás a draft móddal
+% \documentclass[12pt,a4paper,oneside,draft]{report}
+% ekkor a képek nem renderelődnek ki, csak placeholder lesz mérethelyesen
+\usepackage[magyar]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage[sorting=none]{biblatex} [style=ieee] % <- emiatt megakad (nem akad meg amúgy), [sorting=none]: előfurdulás sorrendjébe rakja a hivatkozásokat
+\usepackage{caption}
+%\usepackage[hang]{caption}
+\usepackage{enumerate}
+\usepackage{epsfig} % eps importáláshoz
+\usepackage{float} % képek pontos elhelyezéséhez: \begin{figure}[H]
+\usepackage{graphics} % grafikus elemek, képek berakásához
+\usepackage{graphicx}
+\usepackage{hyperref} % PDF hivatkozásokhoz kell
+\usepackage{hyphenat} % elválasztáshoz
+\usepackage{url}
+\usepackage[utf8]{inputenc} % mindenképp maradjon az utf-8 kódolás
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{mathcmd} % \Grad \Div \Rot \mathrm{dv}
+\usepackage{sectsty}
+\usepackage{setspace}
+\usepackage{siunitx} % \SI{}{} \si{}
+\usepackage{subcaption} % subcaption-hoz, pl: 3.2.2
+\usepackage{titling} % a title, author parancsok szabad használatához
+\usepackage{psfrag} % eps kép szövegéhez
+
+% a TikZ rajzoló modul, és a kapcsolási rajz készítő modul, ha kell
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+
+% az A4 oldal margóinak és méreteinek beállítása
+\usepackage[left=25mm,right=25mm,top=20mm,bottom=25mm]{geometry}\pagestyle{plain}
+
+% A sorköz távolság beállítása
+% egyszeres sorköz
+\singlespacing
+% 1,5 sorköz
+% \onehalfspacing
+
+% A hivatkozások, és linkek átállítása alapértelmezett színre, fekete-fehér nyomtatáshoz optimalizálva
+\hypersetup
+{
+  	colorlinks,
+  	citecolor=black,
+ 	linkcolor=black,
+  	urlcolor=black
+}
+
+
+% a dolgozat címe
+\newcommand{\dokumentumcim}{7. mérés: Szuperheterodin elvű rádió adó és vevő lánc mérése elv}
+
+% a dolgozat típusa
+\title{Rádióátviteli mérések laboratórium 2 (BMEVIHVMB02),\\
+jegyzőkönyv beszámoló}
+
+% konzulens
+%\newcommand{\konzulens}{Konzulens: nincs} 
+
+% a dolgozat szerzője
+\author{HVT A csoport:\\
+Horváth Péter (GV1A6F)\\
+Kepics János (M74KL4)\\
+Pintér Bálint (I6QS0K)\\
+Szilágyi Gábor (NOMK01)}
+
+% a dolgozat típusa - ez nincs a címlapon
+\newcommand{\dokumentumtipus}{Szuperheterodin labor jkv}
+
+
+% irodalomjegyzék forrása
+%\addbibresource{szakdoga_irodalom.bib}
+
+\begin{document}
+
+\include{titlepage}
+%\tableofcontents
+%\include{bevezeto}
+\include{feladat}
+%\include{koszonet}
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{tdk.bib}
+
+%\listoffigures
+%\listoftables
+%\include{fuggelek}
+
+\end{document}
+
+
+
+
+
+
+
